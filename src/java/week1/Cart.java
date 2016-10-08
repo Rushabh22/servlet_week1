@@ -19,17 +19,18 @@ public class Cart implements Serializable {
 
 	@PostConstruct
 	private void init() {
-		System.out.println(">>> in post construct");
+		System.out.println(">>> in post construct of Cart session");
 	}
 
 	@PreDestroy
 	private void destroy() {
-		System.out.println(">>> in pre destroy");
+		System.out.println(">>> in pre destroy  of Cart session");
 	}
 
 	//Save the content instead of the container
 	public void add() {
 		cart.add(item.createCopy());
+//                cart.add(item);
 	}
 
 	public List<Item> get() {

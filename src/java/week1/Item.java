@@ -11,12 +11,12 @@ public class Item {
 
 	@PostConstruct
 	private void init() {
-		System.out.println("@PostConstruct item");
+		System.out.println("@PostConstruct item (Request Scoped)");
 	}
 
 	@PreDestroy
 	private void destroy() {
-		System.out.println("@PreDestroy item: " + item);
+		System.out.println("@PreDestroy item:(Request Scoped) " + item);
 	}
 
 	public String getItem() {
